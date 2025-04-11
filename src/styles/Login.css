@@ -1,0 +1,108 @@
+/* ===== Estilos corregidos para partículas ===== */
+.login-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.login-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* ===== Estilos para el formulario de login ===== */
+.login-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  padding: 3rem;
+  background-color: rgba(20, 20, 20, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(128, 128, 128, 0.7);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(128, 128, 128, 0.7), 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-card h2 {
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.login-card .form-control {
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  margin-bottom: 1.5rem;
+}
+
+.btn-secondary {
+  background-color: #17202a;
+  border-color: #1c2833;
+  color: white;
+  padding: 0.2rem 1.5rem;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background-color: #1c2833;
+  box-shadow: 0 0 30px 0 rgba(192, 192, 192, 0.5);
+}
+
+.btn-secondary:before {
+  animation: shine 0.5s linear forwards;
+}
+
+@keyframes shine {
+  0% { opacity: 0; left: 0%; }
+  50% { opacity: 1; }
+  100% { opacity: 0; left: 100%; }
+}
+
+/* Imagen en la parte superior derecha */
+.login-logo {
+  position: absolute;
+  top: 10px;
+  right: 1100px;
+  width: 150px; /* Puedes ajustar el tamaño según necesites */
+  height: auto;
+}
+
+/* Estilos para que los labels y el párrafo sean de color blanco */
+.login-card label,
+.login-card p {
+  color: #fff;
+}
+
+/* Título "Iniciar Sesión" con color blanco y difuminado lateral de gris */
+.login-card h2 {
+  background: linear-gradient(to left, rgb(224, 224, 224), white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 1rem;
+}

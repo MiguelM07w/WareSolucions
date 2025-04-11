@@ -1,0 +1,13 @@
+
+body.light-theme {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.dark-theme {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* AdminDashboard.css */
+
