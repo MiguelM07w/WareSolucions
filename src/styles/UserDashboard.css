@@ -1,0 +1,324 @@
+.user-dashboard-container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem;
+  z-index: 1;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+/* Menú (Navbar): más pequeño y con fondo más transparente */
+.metal-navbar {
+  background: linear-gradient(145deg, rgba(10, 10, 10, 0.432), rgba(26, 26, 26, 0.075));
+  border-bottom: 2px solid #ff0000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.349);
+  padding: 0.6rem 1rem;
+}
+
+.metal-navbar .navbar-brand {
+  color: #ff0000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+  font-size: 0.9rem;
+}
+
+.metal-navbar .nav-link {
+  color: #c0c0c0 !important;
+  margin: 0 0.8rem;
+  padding: 0.3rem 0.6rem !important;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.metal-navbar .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff0000;
+  transition: width 0.3s ease;
+}
+
+.metal-navbar .nav-link:hover {
+  color: #ffffff;
+}
+
+.metal-navbar .nav-link:hover::before {
+  width: 100%;
+}
+
+.metal-navbar .logout-btn {
+  background: linear-gradient(145deg, rgba(45,45,45,0.6), rgba(26,26,26,0.6));
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 0.2rem 0.6rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.metal-navbar .logout-btn:hover {
+  background: linear-gradient(145deg, #ff0000, #cc0000);
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Título centrado en su propia línea */
+/* Título centrado en su propia línea */
+.user-dashboard-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 1.5rem auto;
+  font-size: 2rem;
+  color: #ff0000;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.user-dashboard-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff0000, transparent);
+}
+
+/* Card de Hora Actual convertida en barra pequeña, centrada justo debajo del título */
+.hora-actual-card {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;       /* Centrado horizontal */
+  padding: 0.2rem 0.4rem; /* Mínimo padding */
+  min-height: 20px;      /* Altura mínima */
+  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+  border: 1px solid #ff0000;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  text-align: center;    /* Centrar el contenido (la hora) */
+  font-size: 0.9rem;
+  color: #c0c0c0;
+}
+
+/* Encabezado interno para la card de Hora Actual */
+.hora-actual-header {
+  font-size: 0.9rem;
+  color: #ff0000;
+  text-align: center;
+  margin-bottom: 0.1rem;
+}
+
+/* Tarjetas (cards) generales con efecto metálico resaltado */
+.user-card {
+  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+  border: 1px solid #ff0000;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  min-height: 160px;
+}
+
+.user-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0000, transparent, #ff0000);
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.user-card-header {
+  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  padding: 0.8rem;
+  border-bottom: 1px solid #363636;
+  font-size: 1rem;
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.user-card-body {
+  padding: 1rem;
+  color: #c0c0c0;
+}
+
+.user-card-body p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+.user-card-body h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Barras del sensor y alertas: diseño delgado */
+.sensor-status-bar,
+.alerts-bar {
+  padding: 0.3rem 0.5rem;
+  min-height: 50px;
+  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+  border: 1px solid #ff0000;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  margin-top: 1rem;
+}
+
+.sensor-status-bar .user-card-body,
+.alerts-bar .user-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+
+/* Botón para alternar el sensor */
+.toggle-sensor-btn {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Botón de emergencia */
+.user-emergency-btn {
+  background: linear-gradient(145deg, #ff0000, #cc0000);
+  color: #fff !important;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  margin: 1.5rem auto 0;
+}
+
+.user-emergency-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.user-emergency-btn:hover {
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.user-emergency-btn:hover::before {
+  left: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .metal-navbar .nav-link {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .metal-navbar .logout-btn {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .user-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* --- Tabla de alertas con colores rojo y negro --- */
+.tabla-alertas {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.tabla-alertas th,
+.tabla-alertas td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ff0000;
+  text-align: left;
+}
+
+.tabla-alertas th {
+  background-color: #1a1a1a;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.tabla-alertas td {
+  background-color: #000;
+  color: #fff;
+}
+
+.estado-activo {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.estado-inactivo {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.alertas-recientes {
+  padding: 1rem;
+  background-color: #111;
+  border-radius: 8px;
+}
+
+/* --- Texto sin alertas --- */
+.sin-alertas {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #ccc;
+  font-style: italic;
+}

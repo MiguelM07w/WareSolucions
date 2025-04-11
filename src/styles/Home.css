@@ -1,0 +1,341 @@
+/* Estilos base del layout */
+.home-layout-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main-content {
+  position: relative;
+  padding-top: 4rem;
+  flex: 1;
+  z-index: 2;
+}
+
+.home-main-content::before {
+  content: "WareSolucions";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  z-index: -1;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Sección Hero */
+.hero-section {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin: 5rem 0;
+}
+
+.main-title {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  /* Eliminamos text-transform para mantener mayúsculas y minúsculas originales */
+  letter-spacing: 0.2em;
+}
+
+/* Estilos para cada parte del título */
+.outline-part {
+  -webkit-text-fill-color: transparent; /* Sin relleno */
+  -webkit-text-stroke: 2px #fd0c0c;          /* Contorno blanco */
+  display: inline-block;
+}
+
+.fill-part {
+  color: #f82424; /* Relleno sólido */
+  display: inline-block;
+}
+
+/* Estilos adicionales para el slogan y demás */
+.slogan {
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+  margin-top: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+  /* Grid de características */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 5rem auto;
+  }
+  
+  .feature-card {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-title {
+    color: #00f7ff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-text {
+    line-height: 1.6;
+    color: #cccccc;
+  }
+  
+  /* Sección CTA */
+  .cta-section {
+    text-align: center;
+    margin: 8rem 0;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cta-button {
+    padding: 1.2rem 3rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .cta-button.demo {
+    background: linear-gradient(135deg, #00f7ff, #0066ff);
+    color: #000;
+  }
+  
+  .cta-button.contact {
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+    color: #fff;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 247, 255, 0.4);
+  }
+  
+  /* Animaciones */
+  @keyframes neonPulse {
+    from {
+      text-shadow: 0 0 10px #00f7ff,
+                   0 0 20px #00f7ff,
+                   0 0 30px #00f7ff;
+    }
+    to {
+      text-shadow: 0 0 20px #00f7ff,
+                   0 0 30px #00f7ff,
+                   0 0 40px #00f7ff;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-main-content::before {
+      font-size: 4rem;
+      top: 40%;
+    }
+  
+    .main-title {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      margin: 3rem 0;
+    }
+  
+    .slogan {
+      font-size: 1.2rem;
+    }
+  
+    .cta-title {
+      font-size: 2rem;
+    }
+  
+    .feature-title {
+      font-size: 1.5rem;
+    }
+  }
+
+ /* Sección Quiénes Somos */
+.about-section {
+    padding: 3rem 1rem;
+    background-color: transparent; /* Fondo transparente */
+    color: #ffffff;
+    text-align: center;
+  }
+  .about-section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fd0c0c; /* Rojo de acento */
+  }
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .about-text {
+    flex: 1 1 300px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .about-image {
+    flex: 1 1 300px;
+  }
+  .about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Sección Servicios */
+  .services-section {
+    padding: 3rem 1rem;
+    background-color: transparent; /* Fondo transparente */
+    color: #ffffff;
+    text-align: center;
+  }
+  .services-section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f82424; /* Rojo más intenso */
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .service-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  .service-card img {
+    width: 100%;
+    height: auto;
+  }
+  .service-title {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+    color: #fd0c0c;
+  }
+  .service-text {
+    padding: 0 1rem 1rem;
+    font-size: 1rem;
+    color: #cccccc;
+  }
+  
+  /* Sección Contáctanos */
+  .contact-section {
+    padding: 3rem 1rem;
+    background-color: transparent; /* Fondo transparente */
+    color: #ffffff;
+    text-align: center;
+  }
+  .contact-section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f82424;
+  }
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+  }
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  .contact-form button {
+    width: 50%;
+    padding: 1rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+    color: #fff;
+    margin: 0.5rem auto;
+    transition: transform 0.3s ease;
+  }
+  .contact-form button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Sección Quiénes Somos */
+.about-image img {
+    max-width: 35%; /* Disminuye el tamaño máximo */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Sección Servicios */
+  .service-card img {
+    max-width: 35%; /* Ajusta el tamaño para que se adapte a la card */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  
